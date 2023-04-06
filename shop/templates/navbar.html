@@ -11,7 +11,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="">{{user.username}}</a>
               </li>
-              {% if request.is_authenticated %}
+              {% if  request.is_authenticated %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </li>
@@ -24,7 +24,7 @@
                 </li>
               {% endif %}
             <li class="nav-item">
-                <a class="nav-link" href="">collections</a>
+                <a class="nav-link" href="{% url 'collection' %}">collections</a>
             </li>
            
            

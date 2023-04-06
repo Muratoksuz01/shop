@@ -16,7 +16,7 @@ class Catagorys(models.Model):
 
 # Create your models here.
 class Product(models.Model):
-    categories=models.ManyToManyField(Catagorys,blank=True)
+    categories=models.ForeignKey(Catagorys,blank=True,on_delete=models.CASCADE,default=1)
     name=models.CharField(max_length=200)
     vendor=models.CharField(max_length=200)
     image=models.ImageField(upload_to="images")

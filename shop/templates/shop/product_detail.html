@@ -21,11 +21,10 @@
                   <button class="input-group-text bg-success text-light" id="btnPlus"><i class="fa fa-plus"></i></button>
                   </div>
                 </p>
-
-           <a href="{% url 'save_carts' product.id %}">
-              <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-              Add to cart
-            </a>
+                <button onclick="sendInputValue()">
+                  <i class="fa-sharp fa-solid fa-cart-shopping"></i>    
+                  Add to cart</button>
+          
             <br>
             <a href="{% url 'save_favourites' product.id %}">
 
@@ -39,6 +38,12 @@
   </div>
 
   <script>
+    
+
+
+  
+
+
     document.addEventListener("DOMContentLoaded", function(event) {
     const btnPlus = document.getElementById("btnPlus");
     const btnMinus = document.getElementById("btnMinus");

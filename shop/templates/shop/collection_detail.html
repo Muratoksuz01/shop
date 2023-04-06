@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for collec in products %}
+<a href="{% url 'product_detail' collec.slug %}">
+    <div class="card" style="width: 18rem;">
+        <img style="width:150px" src="{{collec.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{collec.name}}</h5>
+        </div>
+    
+        <div class="card-body">
+            <div class="col">
+                <div class="p-3">{{collec.original_price}}</div>
+              </div>
+              <div class="col">
+                <div class="p-3">{{collec.selling_price}}</div>
+              </div>
+        </div>
+    </div>
+</a>
+{% endfor %}
+{% endblock content %}
